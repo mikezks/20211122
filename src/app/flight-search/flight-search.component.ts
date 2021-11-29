@@ -2,12 +2,16 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { delay, map } from 'rxjs';
 import { Flight } from '../entities/flight';
+import { DefaultFlightService } from './default-flight.service';
 import { FlightService } from './flight.service';
 
 @Component({
   selector: 'app-flight-search',
   templateUrl: './flight-search.component.html',
-  styleUrls: ['./flight-search.component.css']
+  styleUrls: ['./flight-search.component.css'],
+  providers: [
+    { provide: FlightService, useClass: DefaultFlightService }
+  ]
 })
 export class FlightSearchComponent implements OnInit {
   from: string = 'Hamburg';
@@ -21,7 +25,7 @@ export class FlightSearchComponent implements OnInit {
   }
 
   search(): void {
-    this.flightService.load(this.from, this.to)
+    this.flightService.find(this.from, this.to)
       .subscribe({
         next: flights => {
           this.flights = flights;
