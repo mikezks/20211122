@@ -1,9 +1,7 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { delay, map } from 'rxjs';
-import { Flight } from '../entities/flight';
-import { DefaultFlightService } from './default-flight.service';
-import { FlightService } from './flight.service';
+import { Flight } from '../../../entities/flight';
+import { DefaultFlightService } from '../../data-access/default-flight.service';
+import { FlightService } from '../../data-access/flight.service';
 
 @Component({
   selector: 'app-flight-search',
