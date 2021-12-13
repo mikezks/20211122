@@ -8,6 +8,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { FlightService } from './flight-search/flight.service';
 import { DefaultFlightService } from './flight-search/default-flight.service';
+import { CityPipe } from './shared/pipes/city.pipe';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DefaultFlightService } from './flight-search/default-flight.service';
     AppComponent,
     SidebarComponent,
     NavbarComponent,
-    FlightSearchComponent
+    FlightSearchComponent,
+    CityPipe
   ],
   imports: [
     BrowserModule,
