@@ -32,7 +32,10 @@
     <app-flight-card
       [item]="flight"
       [(selected)]="basket[flight.id]">
-      <!-- (selectedChange)="basket[flight.id] = $event"> -->
+
+      <span>My new text content! :)</span>
+      <span myAttribute="myValue" class="my-custom-title">This is my extra title!</span>
+
     </app-flight-card>
   </div>
 </div>
