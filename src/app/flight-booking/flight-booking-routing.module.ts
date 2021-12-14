@@ -5,8 +5,13 @@ import { FlightSearchComponent } from './feature/flight-search/flight-search.com
 
 const routes: Routes = [
   {
-    path: 'flight-booking',
+    path: '',
     children: [
+      {
+        path: '',
+        redirectTo: 'flight-search',
+        pathMatch: 'full'
+      },
       {
         path: 'flight-search',
         component: FlightSearchComponent

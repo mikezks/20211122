@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { FlightBookingModule } from './flight-booking/flight-booking.module';
 import { CoreModule } from './core/core.module';
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
@@ -19,7 +18,7 @@ import { APP_ROUTES } from './app.routes';
     FormsModule,
     RouterModule.forRoot(APP_ROUTES),
     CoreModule,
-    FlightBookingModule
+    // FlightBookingModule
   ],
   providers: [
     /* { provide: FlightService, useClass: DefaultFlightService } */
