@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FlightBookingModule } from './flight-booking/flight-booking.module';
 import { CoreModule } from './core/core.module';
+import { RouterModule } from '@angular/router';
+import { APP_ROUTES } from './app.routes';
 
 
 @NgModule({
@@ -15,6 +17,7 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    RouterModule.forRoot(APP_ROUTES),
     CoreModule,
     FlightBookingModule
   ],
