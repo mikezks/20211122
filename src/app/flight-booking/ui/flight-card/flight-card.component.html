@@ -21,6 +21,6 @@
                 (click)="toggleSelection()">{{ selected ? 'Remove' : 'Select' }}</button>
             <a
                 class="btn btn-default"
-                routerLink="../flight-edit">Edit</a>
+                [routerLink]="['../flight-edit', item?.id, { showDetails: true }]">Edit</a>
   </div>
 </div>
