@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CityPipe } from './pipes/city.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CityValidatorDirective } from './validation/city-validator.directive';
 
 
@@ -12,10 +12,12 @@ import { CityValidatorDirective } from './validation/city-validator.directive';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     FormsModule,
+    ReactiveFormsModule,
     CityPipe,
     CityValidatorDirective
   ]
